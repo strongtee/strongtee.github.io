@@ -1,0 +1,157 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            
+            body{
+                background-image: url("background.jpg");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            .text_1{
+                background-image: url('text.gif');
+                font-family: 'Lobster';
+                font-size: 10px;
+                text-shadow: 0 0 10px white, 0 0 5px white;
+                font-weight: bold;
+                background-size: contain;
+                text-transform: uppercase;
+                border-radius: 30px;
+                color: gray;
+                position: absolute;
+                text-align:center;
+                margin-top: 2%;
+                margin-left: 26%;
+                font-size: large;
+                border: white;
+            }
+            
+            .video{
+                width: 200px;
+                height: 50px;
+                color: white;
+                background-color: #fa4a05;
+                font-weight: 20px;
+                font-family: 'Courier';
+                cursor: pointer;
+                border: none;
+                border-radius: 10px;
+                margin-top: 45.2%;
+                margin-left: 35.25%;
+                font-weight: bold;
+            }
+            .video:hover{
+                transition-duration: 0.3s;
+                background-color: bisque;
+                border-color: #fa4a05;
+                color: #fa4a05;
+                border:#fa4a05;
+                border-width: 10px;
+                font-family: 'Tahoma';
+                font-weight: bolder;
+            }
+
+            .hinhdim::before{
+                position: absolute;
+                width: 100px;
+                height: 35px;
+                color:lightcoral;
+                margin-left: 29%;
+                margin-top: 10%;
+                cursor: pointer;
+                background-color: blanchedalmond;
+                border-radius: 10px;
+                border: none;
+                font-weight: bold;
+                content: "Hình dìm :>";
+            }
+
+            .hinhdim:hover::before{
+                background-image: url('hinhdim.jpg');
+                background-size: contain;
+                transition: 2s;
+                width: 12.8%;
+                height: 40.8%;
+                color:deeppink;
+                text-align: center;
+                transition-timing-function: ease-in-out;
+                font-weight: bolder;
+                content: "Hình đẹp nè :))))";
+                font-weight: bolder;
+            }
+
+            .qua::after{
+                position: absolute;
+                width: 100px;
+                height: 35px;
+                background-color: blanchedalmond;
+                color: lightcoral;
+                border: none;
+                border-radius: 10px;
+                margin-top: 10%;
+                margin-left: 53%;
+                cursor: pointer;
+                content: "Hay là quà nhỉ";
+                font-weight: bold;
+            }
+
+            .qua:hover::after{
+                background-image: url('hinhdim2.jpg');
+                width: 12.8%;
+                height: 40.8%;
+                transition: 2s;
+                background-size: contain;
+                color:brown;
+                content: "Chúc mừng xốp! Quà là hình dìm đó :3";
+                transition-timing-function: ease-in-out;
+                font-weight: bolder;
+            }
+
+            .button_play_content{
+                border-radius: 200px;
+                background-color:blanchedalmond;
+                text-transform: uppercase;
+                cursor: pointer;
+                border-color: #fa4a05;
+                color: #fa4a05;
+                border-width: 3px;
+                font-weight: bold ;
+                margin-top: 8%;
+                margin-left: 40%;
+            }
+        </style>
+    </head>
+    <body>
+
+        <script>
+            let audio = new Audio("yume_to_harazuka.mp3");
+            let play = false;
+            audio.loop = true;
+            function playMusic(){
+                play = !play;
+                if (play)
+                    audio.play();
+                else
+                    audio.pause();
+            }
+        </script>
+
+        <button class = "text_1" style="height: 50px; width: 500; transition-delay: 2s;">
+        CHÚC MỪNG SINH NHẬT
+        </button>
+
+        <button class = "hinhdim" ></button>
+
+        <button class = "qua" ></button>
+
+        <button class = "button_play_content" style = "position: absolute;" onclick = playMusic()>Phát/Dừng</button>
+
+        <a href = "https://drive.google.com/file/d/1JrnpPFFm--e3NvXALdnc50v0kXnWgSfp/view?usp=drive_link" target = "_blank">
+            <button class="video" style = "position: absolute;">
+            VIDEO
+            </button>
+        </a>
+    </body>
+</html>
